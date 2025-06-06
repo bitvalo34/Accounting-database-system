@@ -1,0 +1,234 @@
+/* ================================
+   Fuentes y fondo general
+   ================================ */
+/* Define el fondo, la tipografía y los estilos generales del body */
+body {
+  background: #f4f7fc;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #333;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Define márgenes y estructura base para el elemento HTML */
+html {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+/* ================================
+   Navbar
+   ================================ */
+/* Estilos personalizados para la barra de navegación */
+.navbar-custom {
+  background-color: #003366; 
+  border-bottom: 3px solid #00aaff; 
+}
+
+/* Estilos para la marca y los enlaces de la navbar */
+.navbar-custom .navbar-brand,
+.navbar-custom .nav-link {
+  color: #ffffff;
+  font-weight: 500;
+}
+.navbar-custom .nav-link:hover {
+  color: #cce6ff;
+}
+
+/* ================================
+   Detalle y Botón de Cierre de Detalles
+   ================================ */
+/* Estilos para las filas de detalles (por ejemplo, en reportes o listas) */
+.detalle-row {
+  background: #f9f9f9;
+}
+.detalle-table th, .detalle-table td {
+  font-size: 0.9em;
+}
+/* Botón para cerrar detalles */
+.cerrar-detalle {
+  margin-top: 10px;
+}
+
+/* ================================
+   Container Principal
+   ================================ */
+/* Agrega un padding superior al contenedor principal */
+.container {
+  padding-top: 20px;
+}
+
+/* ================================
+   Botones Personalizados
+   ================================ */
+/* Estilo personalizado para botones con clase btn-custom */
+.btn-custom {
+  background-color: #003366;
+  color: #fff;
+  border: none;
+  box-shadow: 0px 2px 5px rgba(0,0,0,0.2);
+  transition: background-color 0.3s ease;
+}
+.btn-custom:hover {
+  background-color: #4b79a7;
+}
+
+/* Formularios y cajas de texto */
+.form-control {
+  border-radius: 0.25rem;
+  border: 1px solid #ced4da;
+}
+.form-group label {
+  font-weight: 500;
+  color: #003366;
+}
+
+/* ================================
+   Tablas
+   ================================ */
+/* Estilos para tablas con fondo blanco, bordes y sombra sutil */
+.table {
+  background: #fff;
+  border: 1px solid #dee2e6;
+  box-shadow: 0px 1px 3px rgba(0,0,0,0.1);
+}
+.table thead th {
+  background-color: #003366;
+  color: #fff;
+}
+.table-bordered th,
+.table-bordered td {
+  border: 1px solid #dee2e6;
+}
+
+.mensaje-validacion {
+  font-weight: bold;
+  color: red;
+}
+/* Contenedor global de la T: se imprime el borde horizontal solo una vez */
+#tGlobal {
+  border-top: 2px solid #000;
+  margin-top: 10px;
+  padding-top: 10px;
+}
+.movimiento {
+  margin-bottom: 10px;
+}
+/* Contenedor T para los montos: solo la línea vertical */
+.t-container {
+  position: relative;
+  display: flex;
+  align-items: stretch;
+  min-height: 50px;
+}
+.t-container::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: #000;
+}
+.t-debe, .t-haber {
+  width: 50%;
+  padding: 0 10px;
+}
+/* Totales: se alinean justo debajo de cada columna de la T */
+#totales {
+  margin-top: 10px;
+  border-top: 1px solid #000;
+  padding-top: 10px;
+}
+#totales .col-6 {
+  padding: 0 10px;
+}
+/* Evitar ingreso de letras en montos */
+.valorDebe, .valorHaber {
+  ime-mode: disabled;
+}
+
+/* Tarjetas y secciones */
+.card {
+  border: none;
+  border-radius: 0.25rem;
+  box-shadow: 0px 2px 8px rgba(0,0,0,0.1);
+  margin-bottom: 20px;
+}
+
+/* Footer */
+footer {
+  background-color: #003366;
+  color: #fff;
+  padding: 15px 0;
+  text-align: center;
+  margin-top: 30px;
+  width: 100%;
+}
+
+/* Ventanas emergentes (modales) */
+.modal-content {
+  border-radius: 0.25rem;
+}
+.modal-header, .modal-footer {
+  background-color: #003366;
+  color: #fff;
+}
+.modal-header .close {
+  color: #fff;
+}
+
+/* Mensajes y alertas */
+.alert {
+  border-radius: 0.25rem;
+}
+
+/* ================================
+   Secciones Específicas
+   ================================ */
+/* Estilo para sección de ventas con fondo azul muy claro */
+.seccion-ventas {
+  background-color: #e6f7ff;
+  padding: 15px;
+  border-radius: 0.25rem;
+}
+.seccion-compras {
+  background-color: #fffbe6;
+  padding: 15px;
+  border-radius: 0.25rem;
+}
+
+/* ================================
+   Jumbotron
+   ================================ */
+/* Estilos para el jumbotron, incluyendo imagen de fondo borrosa */
+.jumbotron {
+    position: relative;
+    padding: 100px 25px;
+    color: #fff;
+    text-align: center;
+    overflow: hidden;
+}
+
+.jumbotron::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('../images/image.png') no-repeat center center;
+    background-size: cover;
+    filter: blur(3px) brightness(40%);
+    z-index: 0;
+}
+.jumbotron h1,
+.jumbotron p,
+.jumbotron a {
+    position: relative;
+    z-index: 1; 
+}
+
